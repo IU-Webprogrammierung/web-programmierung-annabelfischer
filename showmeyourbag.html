@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's in Annabel's Bag?</title>
+</head>
+<body>
+
+<!--Horizontal Scrollable Menu https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp -->
+<div class="scrollmenu">
+    <a href="index.html">home</a>
+    <a href="music.html">music</a>
+    <a href="books.html">books</a>
+    <a href="style.html">style</a>
+    <a href="showmeyourbag.html">show me your bag!</a>
+</div>
+
+<!--Contact-Section-->
+<div>
+    <h1>show me your bag!</h1>
+    <p>got a bag, a story, and an item that speaks for you? 
+        enlist your essentials and share your bagged tales with the world.</p>
+</div>
+
+<div>
+    <form action="showmeyourbag.php" method="post" enctype="multipart/form-data">
+        <label for="fname">your name:</label><br>
+        <input type="text" id="fname" name="name" placeholder="your name..." required><br><br>
+
+        <label for="fmail">your email:</label><br>
+        <input type="text" id="fmail" name="email" placeholder="your email..." required><br><br>
+
+        <label for="fstory">your bag story:</label><br>
+        <textarea id="fstory" name="story" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="fimage">upload your bag and your bag items in one photo:</label><br>
+        <input type="file" id="fimage" name="image" accept="image/*"><br><br>
+
+        <input type="submit" value="submit your bag">
+    </form>
+</div>
+
+<!--Footer-->
+<footer>Annabel Fischer, 2024</footer>
+
+</body>
+</html>
