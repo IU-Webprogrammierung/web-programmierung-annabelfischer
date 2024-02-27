@@ -2,13 +2,17 @@
     basic styling
 ========================================================================== */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: block;
     background-color: #111111;
     color: #f4f4f4;
     font-family: degular-text, sans-serif;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 145%;
 }
 
@@ -36,16 +40,16 @@ nav.scrollmenu a {
 }
 
 nav.scrollmenu a:hover {
-    text-decoration: wavy underline #FBADAD;
+    text-decoration: wavy underline;
 }
 
 nav.scrollmenu a:focus {
-    text-decoration: wavy underline #FBADAD;
+    text-decoration: wavy underline;
 }
 
 /* active site */
 nav.scrollmenu a.active {
-    text-decoration: wavy underline #FBADAD;
+    text-decoration: wavy underline;
 }
 
 
@@ -53,16 +57,18 @@ nav.scrollmenu a.active {
    hero styling (home)
 ========================================================================== */
 
-/* hero wrapper */
+/* hero wrapper and headings
+========================================================================== */
+
 #hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: flex-start;
-    padding-top: 25vh;
+    padding-top: 30vh;
 }
 
-#hero-h1 {
+#hero h1 {
     font-family: presley-slab, serif;
     font-weight: 400;
     font-style: italic;
@@ -73,22 +79,58 @@ nav.scrollmenu a.active {
     margin: 0.1em 0 0.4em 0;
 }
 
-#hero-sub {
+#hero h2 {
     font-weight: 200;
     font-size: 3vw; /* responsive text */
     text-align: center;
     max-width: 80vw;
     opacity: 0.5;
     line-height: 140%;
-    color: #fbadad;
+    color: #FBADAD;
+}
+
+/* fixed font size for big screens */
+@media screen and (min-width: 769px) {
+    #hero h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* scroll to item-section button
+========================================================================== */
+
+#hero a {
+    color:#FBADAD;
+    font-size: 3vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid 1px;
+    border-radius: 100em;
+    padding: 0.3em 1.3em;
+    transition: 0.5s ease;
+    margin-bottom: 2em;
+}
+
+#hero a:hover {
+    color:#111111;
+    background-color: #FBADAD;
+    border: solid 1px #FBADAD;
+}
+
+/* fixed font size and padding for big screens */
+@media screen and (min-width: 769px) {
+    #hero a {
+        font-size: 1.5em;
+        padding: 0.5em 1.5em;
+    }
 }
 
 /* pink hero-img overlay
-   ========================================================================== */
+========================================================================== */
 
 /* hero-img wrapper */
-#hero-img-wrapper {
-    height: 400px;
+#hero-img {
+    height: 50vw;
     width: 100vw;
     background: #FBADAD;
     overflow: hidden;
@@ -96,16 +138,26 @@ nav.scrollmenu a.active {
 }
 
 /* real img reveal */
-#hero-img-wrapper:hover #hero-img {
-    height: 400px;
+#hero-img:hover img {
+    height: 55vw;
     width: 100vw;
     overflow: hidden;
     opacity: 1;
     filter: grayscale(0%);
 }
 
+/* media query img dimensions*/
+@media screen and (max-width: 769px) {
+    #hero-img {
+        height: 120vw;
+    }
+    #hero-img:hover img {
+        height: 125vw;
+    }
+}
+
 /* img behind overlay */
-#hero-img {
+#hero-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -115,3 +167,11 @@ nav.scrollmenu a.active {
     transition: .5s ease;
 }
 
+
+/* ==========================================================================
+   item-section styling (home)
+========================================================================== */
+
+#item {
+    scroll-margin: 20vw;
+}
