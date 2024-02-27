@@ -1,4 +1,6 @@
-/* basic styling */
+/* ==========================================================================
+    basic styling
+========================================================================== */
 
 body {
     display: block;
@@ -10,7 +12,10 @@ body {
     line-height: 145%;
 }
 
-/* horizontal scrollable menu */
+
+/* ==========================================================================
+   horizontal scrollable menu
+========================================================================== */
 
 nav.scrollmenu {
     display: flex;
@@ -38,13 +43,17 @@ nav.scrollmenu a:focus {
     text-decoration: wavy underline #FBADAD;
 }
 
+/* active site */
 nav.scrollmenu a.active {
     text-decoration: wavy underline #FBADAD;
 }
 
 
-/* hero styling */
+/* ==========================================================================
+   hero styling (home)
+========================================================================== */
 
+/* hero wrapper */
 #hero {
     display: flex;
     flex-direction: column;
@@ -57,7 +66,7 @@ nav.scrollmenu a.active {
     font-family: presley-slab, serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 10vw;
+    font-size: 10vw; /* responsive text */
     line-height: 100%;
     text-transform: uppercase;
     color: #FBADAD;
@@ -66,7 +75,7 @@ nav.scrollmenu a.active {
 
 #hero-sub {
     font-weight: 200;
-    font-size: 3vw;
+    font-size: 3vw; /* responsive text */
     text-align: center;
     max-width: 80vw;
     opacity: 0.5;
@@ -74,7 +83,10 @@ nav.scrollmenu a.active {
     color: #fbadad;
 }
 
-/* rosa overlay */
+/* pink hero-img overlay
+   ========================================================================== */
+
+/* hero-img wrapper */
 #hero-img-wrapper {
     height: 400px;
     width: 100vw;
@@ -83,7 +95,7 @@ nav.scrollmenu a.active {
     border-radius: 2em;
 }
 
-/* img reveal */
+/* real img reveal */
 #hero-img-wrapper:hover #hero-img {
     height: 400px;
     width: 100vw;
@@ -102,5 +114,4 @@ nav.scrollmenu a.active {
     background-blend-mode: screen;
     transition: .5s ease;
 }
-
 
