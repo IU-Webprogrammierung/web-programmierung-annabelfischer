@@ -10,7 +10,6 @@ body {
     line-height: 145%;
 }
 
-
 /* horizontal scrollable menu */
 
 nav.scrollmenu {
@@ -44,5 +43,64 @@ nav.scrollmenu a.active {
 }
 
 
-/* hero-section home */
+/* hero styling */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    padding-top: 25vh;
+}
+
+#hero-h1 {
+    font-family: presley-slab, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 10vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FBADAD;
+    margin: 0.1em 0 0.4em 0;
+}
+
+#hero-sub {
+    font-weight: 200;
+    font-size: 3vw;
+    text-align: center;
+    max-width: 80vw;
+    opacity: 0.5;
+    line-height: 140%;
+    color: #fbadad;
+}
+
+/* rosa overlay */
+#hero-img-wrapper {
+    height: 400px;
+    width: 100vw;
+    background: #FBADAD;
+    overflow: hidden;
+    border-radius: 2em;
+}
+
+/* img reveal */
+#hero-img-wrapper:hover #hero-img {
+    height: 400px;
+    width: 100vw;
+    overflow: hidden;
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* img behind overlay */
+#hero-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    background-blend-mode: screen;
+    transition: .5s ease;
+}
+
 
