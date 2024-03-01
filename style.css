@@ -20,19 +20,34 @@ section {
     margin-bottom: 5em;
 }
 
+h1 {
+    font-family: presley-slab, serif;
+    font-weight: 100;
+    font-size: 10vw; /* responsive text */
+    margin-bottom: 0.6em;
+}
+
 h2 {
     font-family: presley-slab, serif;
     font-weight: 100;
     font-size: 6.5vw; /* responsive text */
     text-align: center;
-    margin: 0em 0em 0.6em 0em;
+    margin-bottom: 0.6em;
 }
 
 p {
-    margin: 0em 0em 1.5em 0em;
+    margin-bottom: 1.5em;
 }
 
-/* mobile adjustments */
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+/* mobile adjustments for body and section
+========================================================================== */
+
 @media screen and (max-width: 769px) {
     body {
         font-size: 0.8em;
@@ -42,11 +57,9 @@ p {
     }
 }
 
-footer {
-    font-size: 0.8em;
-    text-align: center;
-    padding-bottom: 0.5em;
-}
+/* button styling and animation
+========================================================================== */
+
 .button {
     color:#FBADAD;
     font-size: 3vw;
@@ -72,6 +85,7 @@ footer {
         padding: 0.5em 1.5em;
     }
 }
+
 
 /* ==========================================================================
    horizontal scrollable menu
@@ -103,7 +117,7 @@ nav.scrollmenu a:focus {
     text-decoration: wavy underline;
 }
 
-/* active site */
+/* active page */
 nav.scrollmenu a.active {
     text-decoration: wavy underline;
 }
@@ -204,7 +218,6 @@ nav.scrollmenu a.active {
 
 #item {
     scroll-margin: 20vw;
-    margin-bottom: 4em;
 }
 
 /* wrap around items - responsive behaviour
@@ -259,6 +272,7 @@ nav.scrollmenu a.active {
     line-height: 120%;
 }
 
+
 /* ==========================================================================
    cta-section styling (home)
 ========================================================================== */
@@ -267,8 +281,3 @@ nav.scrollmenu a.active {
     text-align: center;
     padding: 15px;
 }
-
-#cta a {
-
-}
-
