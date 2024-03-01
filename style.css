@@ -16,6 +16,62 @@ body {
     line-height: 145%;
 }
 
+section {
+    margin-bottom: 5em;
+}
+
+h2 {
+    font-family: presley-slab, serif;
+    font-weight: 100;
+    font-size: 6.5vw; /* responsive text */
+    text-align: center;
+    margin: 0em 0em 0.6em 0em;
+}
+
+p {
+    margin: 0em 0em 1.5em 0em;
+}
+
+/* mobile adjustments */
+@media screen and (max-width: 769px) {
+    body {
+        font-size: 0.8em;
+    }
+    section {
+        margin-bottom: 3em;
+    }
+}
+
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+.button {
+    color:#FBADAD;
+    font-size: 3vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid 1px;
+    border-radius: 100em;
+    padding: 0.3em 1.3em;
+    transition: .5s ease;
+    margin-bottom: 2em;
+}
+
+.button:hover {
+    color:#111111;
+    background-color: #FBADAD;
+    border: solid 1px #FBADAD;
+}
+
+/* button fixed font size and padding for big screens */
+@media screen and (min-width: 769px) {
+    .button {
+        font-size: 1.5em;
+        padding: 0.5em 1.5em;
+    }
+}
 
 /* ==========================================================================
    horizontal scrollable menu
@@ -32,7 +88,7 @@ nav.scrollmenu {
 nav.scrollmenu a {
     display: inline-block;
     color: #FBADAD;
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     padding: 0.1em 0.9em;
     text-decoration: none;
@@ -81,7 +137,7 @@ nav.scrollmenu a.active {
 
 #hero h2 {
     font-weight: 200;
-    font-size: 3vw; /* responsive text */
+    font-size: 4vw; /* responsive text */
     text-align: center;
     max-width: 80vw;
     opacity: 0.5;
@@ -92,36 +148,7 @@ nav.scrollmenu a.active {
 /* fixed font size for big screens */
 @media screen and (min-width: 769px) {
     #hero h2 {
-        font-size: 1.5em;
-    }
-}
-
-/* scroll to item-section button
-========================================================================== */
-
-#hero a {
-    color:#FBADAD;
-    font-size: 3vw;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: solid 1px;
-    border-radius: 100em;
-    padding: 0.3em 1.3em;
-    transition: 0.5s ease;
-    margin-bottom: 2em;
-}
-
-#hero a:hover {
-    color:#111111;
-    background-color: #FBADAD;
-    border: solid 1px #FBADAD;
-}
-
-/* fixed font size and padding for big screens */
-@media screen and (min-width: 769px) {
-    #hero a {
-        font-size: 1.5em;
-        padding: 0.5em 1.5em;
+        font-size: 1.9em;
     }
 }
 
@@ -147,7 +174,7 @@ nav.scrollmenu a.active {
 }
 
 /* media query img dimensions*/
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 576px) {
     #hero-img {
         height: 120vw;
     }
@@ -172,6 +199,76 @@ nav.scrollmenu a.active {
    item-section styling (home)
 ========================================================================== */
 
+/* section styling
+========================================================================== */
+
 #item {
     scroll-margin: 20vw;
+    margin-bottom: 4em;
 }
+
+/* wrap around items - responsive behaviour
+========================================================================== */
+
+/* row */
+#item div { 
+    display: flex;
+}
+
+/* column */
+#item figure { 
+    flex: 33.33%;
+    transition: .5s ease;
+}
+
+/* smooth hover animation between items */
+#item figure:hover {
+    flex: 50%;
+}
+
+/* stack mobile */
+@media screen and (max-width: 576px) {
+    #item div {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+/* item img dimensions */
+#item img {
+    width: 75%;
+}
+
+/* item link styling
+========================================================================== */
+
+#item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #FBADAD;
+}
+
+#item span {
+    font-family: presley-slab, serif;
+    font-weight: 100;
+    font-size: 6vw;
+    font-style: normal;
+    line-height: 120%;
+}
+
+/* ==========================================================================
+   cta-section styling (home)
+========================================================================== */
+
+#cta {
+    text-align: center;
+    padding: 15px;
+}
+
+#cta a {
+
+}
+
