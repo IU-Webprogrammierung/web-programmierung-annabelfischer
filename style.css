@@ -329,3 +329,47 @@ nav.scrollmenu a.active {
     white-space: nowrap;
     margin-bottom: 1em;
 }
+
+/* ==========================================================================
+   bookshelf (books)
+========================================================================== */
+
+/* tab styling
+========================================================================== */
+
+/* tab container (bookshelf) */
+.tabs {
+    float: left;
+    width: 30%;
+    height: 300px;
+}
+
+/* single tabs (stack of books in bookshelf) */
+.tabs button {
+    display: block;
+    padding: 1.3em 1em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/* active tab (currently shown book information) */
+.tabs button:active {
+    background-color: #FBADAD;
+}
+
+/* book information */
+#bookshelf article {
+    float: left;
+    padding: 0em 0.8em;
+    width: 70%;
+    height: 300px;
+}
+
+/* book cover */
+#bookshelf img {
+    width: 100%;
+}
+
