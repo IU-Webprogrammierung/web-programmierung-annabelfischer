@@ -64,6 +64,7 @@ footer {
     padding-bottom: 0.5em;
 }
 
+
 /* mobile adjustments for body, header and section
 ========================================================================== */
 
@@ -78,6 +79,7 @@ footer {
         margin-bottom: 5em;
     }
 }
+
 
 /* button styling and animation
 ========================================================================== */
@@ -108,6 +110,7 @@ footer {
         padding: 0.5em 1.5em;
     }
 }
+
 
 
 /* ==========================================================================
@@ -146,9 +149,11 @@ nav.scrollmenu a.active {
 }
 
 
+
 /* ==========================================================================
    hero styling (home)
 ========================================================================== */
+
 
 /* hero wrapper and headings
 ========================================================================== */
@@ -189,6 +194,7 @@ nav.scrollmenu a.active {
         font-size: 1.9em;
     }
 }
+
 
 /* pink hero-img overlay
 ========================================================================== */
@@ -233,9 +239,11 @@ nav.scrollmenu a.active {
 }
 
 
+
 /* ==========================================================================
    item-section (home) and record-section (music) styling
 ========================================================================== */
+
 
 /* section styling
 ========================================================================== */
@@ -243,6 +251,7 @@ nav.scrollmenu a.active {
 #item {
     scroll-margin: 20vw;
 }
+
 
 /* wrap around three items/records - responsive behaviour
 ========================================================================== */
@@ -275,19 +284,11 @@ nav.scrollmenu a.active {
     }
 }
 
-/* item img dimensions */
-#item img {
-    width: 75%;
-}
-
-/*record img dimensions */
-#record img {
-    width: 100%;
-}
 
 /* item link styling
 ========================================================================== */
 
+/* big item wrapper with link */
 #item a {
     display: flex;
     flex-direction: column;
@@ -297,17 +298,31 @@ nav.scrollmenu a.active {
     color: #FBADAD;
 }
 
+/* item img dimensions */
+#item img {
+    width: 75%;
+}
+
+
 /* record caption styling 
 ========================================================================== */
 
+/* record name and artist */
 #record figcaption {
     text-align: center;
     color: #FBADAD;
 }
 
+/*record img dimensions */
+#record img {
+    width: 100%;
+}
+
+
 /* item and record span styling 
 ========================================================================== */
 
+/* span styling */
 .emphasize {
     font-family: presley-slab, serif;
     font-weight: 100;
@@ -316,6 +331,7 @@ nav.scrollmenu a.active {
     line-height: 120%;
 }
 
+/* font-size adjustment for bigger screens */
 @media screen and (min-width: 576px) {
     #record .emphasize {
         font-size: 2em;
@@ -323,23 +339,29 @@ nav.scrollmenu a.active {
 }
 
 
+
 /* ==========================================================================
    cta-section styling (home)
 ========================================================================== */
 
+/* format text in layout */
 #cta {
     text-align: center;
     padding: 15px;
 }
 
+
+
 /* ==========================================================================
    spotify-section (music)
 ========================================================================== */
 
+/* section padding */
 #spotify {
     padding: 0% 5%;
 }
 
+/* no line-wrap for iframe heading */
 #spotify h2 {
     white-space: nowrap;
     margin-bottom: 1em;
@@ -349,6 +371,7 @@ nav.scrollmenu a.active {
 /* ==========================================================================
    bookshelf (books)
 ========================================================================== */
+
 
 /* basic styling
 ========================================================================== */
@@ -372,10 +395,12 @@ nav.scrollmenu a.active {
 }
 
 
+
 /* ==========================================================================
    style articles (style)
 ========================================================================== */
 
+/* section padding */
 #style {
     padding: 0% 5%;
 }
@@ -383,14 +408,14 @@ nav.scrollmenu a.active {
 /* basic styling for big screens
 ========================================================================== */
 
-/* style img styling */
+/* article img styling */
 #style img {
     width: 100%;
     object-fit: cover;
     border-radius: 100em 100em 0em 0em; 
 }
 
-/* style h2 adjust text align and margin*/
+/* style h2 adjust text align and margin */
 #style h2 {
     color: #FBADAD;
     text-align: left;
@@ -402,11 +427,13 @@ nav.scrollmenu a.active {
     margin-bottom: 0.2em;
 }
 
+/* center align textbox with article img */
 #style div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 
 /* font-size adjustments for big screens
 ========================================================================== */
@@ -420,7 +447,8 @@ nav.scrollmenu a.active {
     }
 }
 
-/* flex structure
+
+/* grid structure
 ========================================================================== */
 
 #style article {
@@ -430,9 +458,7 @@ nav.scrollmenu a.active {
     margin-bottom: 3em;
 }
 
-/* mobile adjustments on grid
-========================================================================== */
-
+/* stack on mobile */
 @media screen and (max-width: 991px) {
     #style article {
         grid-template-columns: 1fr;
@@ -441,15 +467,21 @@ nav.scrollmenu a.active {
     }
 }
 
+
+
 /* ==========================================================================
    contact form (show me your bag)
 ========================================================================== */
 
+/* section padding */
 #form {
     padding: 0% 5%;
 }
 
+/* form styling
+========================================================================== */
 
+/* text input field and textarea styling */
 input[type=text], textarea {
     width: 100%;
     padding: 0.6em;
@@ -464,15 +496,18 @@ input[type=text], textarea {
     color: #f4f4f4;
 }
 
+/* when clicked inside */
 input[type=text]:focus {
     border-color: #f4f4f4;
 }
 
+/* placeholder styling */
 input::placeholder {
     opacity: .5;
     color: #f4f4f4;
 }
 
+/* file input field styling */
 input[type=file] {
     margin: 0.5em 0em 3em;
     font-family: degular-text, sans-serif;
@@ -480,6 +515,7 @@ input[type=file] {
     color: #f4f4f4;
 }
 
+/* file upload button styling */
 input::file-selector-button {
     font-family: degular-text, sans-serif;
     padding: 0.2em 0.6em;
@@ -489,6 +525,8 @@ input::file-selector-button {
     border-radius: 0.2em;
     cursor: pointer;
 }
+
+/* submit button styling */
 
 input[type=submit] {
     font-family: degular-text, sans-serif;
