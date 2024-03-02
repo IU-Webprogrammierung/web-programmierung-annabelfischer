@@ -16,6 +16,11 @@ body {
     line-height: 145%;
 }
 
+header {
+    margin-bottom: 5em;
+    padding: 15px;
+}
+
 section {
     margin-bottom: 5em;
 }
@@ -24,7 +29,7 @@ h1 {
     font-family: presley-slab, serif;
     font-weight: 100;
     font-size: 10vw; /* responsive text */
-    margin-bottom: 0.6em;
+    margin: 0.8em 0em 0.4em 0em;
 }
 
 h2 {
@@ -45,12 +50,15 @@ footer {
     padding-bottom: 0.5em;
 }
 
-/* mobile adjustments for body and section
+/* mobile adjustments for body, header and section
 ========================================================================== */
 
 @media screen and (max-width: 769px) {
     body {
         font-size: 0.8em;
+    }
+    header {
+        margin-bottom: 3em;
     }
     section {
         margin-bottom: 3em;
@@ -280,4 +288,14 @@ nav.scrollmenu a.active {
 #cta {
     text-align: center;
     padding: 15px;
+}
+
+/* ==========================================================================
+   header styling (subpages)
+========================================================================== */
+
+header a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 0.8em;
 }
