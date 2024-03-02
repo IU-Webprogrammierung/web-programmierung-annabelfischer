@@ -30,6 +30,7 @@ h1 {
     font-family: presley-slab, serif;
     font-weight: 100;
     font-size: 10vw; /* responsive text */
+    line-height: 120%;
     margin: 1em 0em 0.5em 0em;
     white-space: nowrap;
 }
@@ -39,12 +40,14 @@ h2 {
     font-weight: 100;
     font-size: 6.5vw; /* responsive text */
     text-align: center;
+    line-height: 120%;
     margin-bottom: 0.6em;
 }
 
 h3 {
     font-weight: 200;
     font-size: 3vw;
+    line-height: 120%;
     text-transform: uppercase;
     color: #FBADAD;
     opacity: .6;
@@ -367,4 +370,74 @@ nav.scrollmenu a.active {
     color: #FBADAD;
 }
 
-/* author name */
+
+/* ==========================================================================
+   style articles (style)
+========================================================================== */
+
+#style {
+    padding: 0% 5%;
+}
+
+/* basic styling for big screens
+========================================================================== */
+
+/* style img styling */
+#style img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100em 100em 0em 0em; 
+}
+
+/* style h2 adjust text align and margin*/
+#style h2 {
+    color: #FBADAD;
+    text-align: left;
+    margin-top: 0em;
+}
+
+/* style h3 adjust margin-bottom */
+#style h3 {
+    margin-bottom: 0.2em;
+}
+
+#style div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* font-size adjustments for big screens
+========================================================================== */
+
+@media screen and (min-width: 991px) {
+    #style h2 {
+        font-size: 3em;
+    }
+    #style h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* flex structure
+========================================================================== */
+
+#style article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3em;
+    margin-bottom: 3em;
+}
+
+/* mobile adjustments on grid
+========================================================================== */
+
+@media screen and (max-width: 991px) {
+    #style article {
+        grid-template-columns: 1fr;
+        row-gap: 2em;
+        margin-bottom: 3em;
+    }
+}
+
+
