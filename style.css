@@ -17,19 +17,22 @@ body {
 }
 
 header {
-    margin-bottom: 5em;
-    padding: 15px;
+    text-align: center;
+    margin-bottom: 8em;
+    padding: 0% 10%;
 }
 
 section {
-    margin-bottom: 5em;
+    margin-bottom: 8em;
 }
 
 h1 {
     font-family: presley-slab, serif;
     font-weight: 100;
     font-size: 10vw; /* responsive text */
-    margin: 0.8em 0em 0.4em 0em;
+    line-height: 120%;
+    margin: 1em 0em 0.5em 0em;
+    white-space: nowrap;
 }
 
 h2 {
@@ -37,7 +40,18 @@ h2 {
     font-weight: 100;
     font-size: 6.5vw; /* responsive text */
     text-align: center;
+    line-height: 120%;
     margin-bottom: 0.6em;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 3vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FBADAD;
+    opacity: .6;
+    margin: 0em 0em 1.5em;
 }
 
 p {
@@ -50,6 +64,7 @@ footer {
     padding-bottom: 0.5em;
 }
 
+
 /* mobile adjustments for body, header and section
 ========================================================================== */
 
@@ -58,12 +73,13 @@ footer {
         font-size: 0.8em;
     }
     header {
-        margin-bottom: 3em;
+        margin-bottom: 5em;
     }
     section {
-        margin-bottom: 3em;
+        margin-bottom: 5em;
     }
 }
+
 
 /* button styling and animation
 ========================================================================== */
@@ -78,6 +94,7 @@ footer {
     padding: 0.3em 1.3em;
     transition: .5s ease;
     margin-bottom: 2em;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -93,6 +110,7 @@ footer {
         padding: 0.5em 1.5em;
     }
 }
+
 
 
 /* ==========================================================================
@@ -131,9 +149,11 @@ nav.scrollmenu a.active {
 }
 
 
+
 /* ==========================================================================
    hero styling (home)
 ========================================================================== */
+
 
 /* hero wrapper and headings
 ========================================================================== */
@@ -155,6 +175,7 @@ nav.scrollmenu a.active {
     text-transform: uppercase;
     color: #FBADAD;
     margin: 0.1em 0 0.4em 0;
+    white-space: npowrap;
 }
 
 #hero h2 {
@@ -173,6 +194,7 @@ nav.scrollmenu a.active {
         font-size: 1.9em;
     }
 }
+
 
 /* pink hero-img overlay
 ========================================================================== */
@@ -217,9 +239,11 @@ nav.scrollmenu a.active {
 }
 
 
+
 /* ==========================================================================
-   item-section styling (home)
+   item-section (home) and record-section (music) styling
 ========================================================================== */
+
 
 /* section styling
 ========================================================================== */
@@ -228,41 +252,43 @@ nav.scrollmenu a.active {
     scroll-margin: 20vw;
 }
 
-/* wrap around items - responsive behaviour
+
+/* wrap around three items/records - responsive behaviour
 ========================================================================== */
 
 /* row */
-#item div { 
+.three { 
     display: flex;
 }
 
 /* column */
-#item figure { 
+.three figure { 
     flex: 33.33%;
     transition: .5s ease;
 }
 
-/* smooth hover animation between items */
+/* smooth hover animation just between items */
 #item figure:hover {
+    flex: 50%;
+}
+
+#item figure:focus {
     flex: 50%;
 }
 
 /* stack mobile */
 @media screen and (max-width: 576px) {
-    #item div {
+    .three {
         flex-direction: column;
         gap: 1em;
     }
 }
 
-/* item img dimensions */
-#item img {
-    width: 75%;
-}
 
 /* item link styling
 ========================================================================== */
 
+/* big item wrapper with link */
 #item a {
     display: flex;
     flex-direction: column;
@@ -272,7 +298,32 @@ nav.scrollmenu a.active {
     color: #FBADAD;
 }
 
-#item span {
+/* item img dimensions */
+#item img {
+    width: 75%;
+}
+
+
+/* record caption styling 
+========================================================================== */
+
+/* record name and artist */
+#record figcaption {
+    text-align: center;
+    color: #FBADAD;
+}
+
+/*record img dimensions */
+#record img {
+    width: 100%;
+}
+
+
+/* item and record span styling 
+========================================================================== */
+
+/* span styling */
+.emphasize {
     font-family: presley-slab, serif;
     font-weight: 100;
     font-size: 6vw;
@@ -280,23 +331,204 @@ nav.scrollmenu a.active {
     line-height: 120%;
 }
 
+/* font-size adjustment for bigger screens */
+@media screen and (min-width: 576px) {
+    #record .emphasize {
+        font-size: 2em;
+    }
+}
+
+
 
 /* ==========================================================================
    cta-section styling (home)
 ========================================================================== */
 
+/* format text in layout */
 #cta {
     text-align: center;
     padding: 15px;
 }
 
+
+
 /* ==========================================================================
-   record section (tabs)
+   spotify-section (music)
 ========================================================================== */
 
-header a {
-    color: #f4f4f4;
-    text-decoration: none;
-    font-size: 0.8em;
+/* section padding */
+#spotify {
+    padding: 0% 5%;
 }
 
+/* no line-wrap for iframe heading */
+#spotify h2 {
+    white-space: nowrap;
+    margin-bottom: 1em;
+}
+
+
+/* ==========================================================================
+   bookshelf (books)
+========================================================================== */
+
+
+/* basic styling
+========================================================================== */
+
+/* book section */
+#bookshelf {
+    padding: 0% 5%;
+}
+
+/* book cover */
+#bookshelf img {
+    width: 100%;
+}
+
+/* book name */
+#bookshelf h2 {
+    text-align: left;
+    line-height: 120%;
+    margin-bottom: 0em;
+    color: #FBADAD;
+}
+
+
+
+/* ==========================================================================
+   style articles (style)
+========================================================================== */
+
+/* section padding */
+#style {
+    padding: 0% 5%;
+}
+
+/* basic styling for big screens
+========================================================================== */
+
+/* article img styling */
+#style img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100em 100em 0em 0em; 
+}
+
+/* style h2 adjust text align and margin */
+#style h2 {
+    color: #FBADAD;
+    text-align: left;
+    margin-top: 0em;
+}
+
+/* style h3 adjust margin-bottom */
+#style h3 {
+    margin-bottom: 0.2em;
+}
+
+/* center align textbox with article img */
+#style div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* font-size adjustments for big screens
+========================================================================== */
+
+@media screen and (min-width: 991px) {
+    #style h2 {
+        font-size: 3em;
+    }
+    #style h3 {
+        font-size: 1.5em;
+    }
+}
+
+
+/* grid structure
+========================================================================== */
+
+#style article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3em;
+    margin-bottom: 3em;
+}
+
+/* stack on mobile */
+@media screen and (max-width: 991px) {
+    #style article {
+        grid-template-columns: 1fr;
+        row-gap: 2em;
+        margin-bottom: 3em;
+    }
+}
+
+
+
+/* ==========================================================================
+   contact form (show me your bag)
+========================================================================== */
+
+/* section padding */
+#form {
+    padding: 0% 5%;
+}
+
+/* form styling
+========================================================================== */
+
+/* text input field and textarea styling */
+input[type=text], textarea {
+    width: 100%;
+    padding: 0.6em;
+    background-color: #111111;
+    border: 1px solid #FBADAD;
+    border-radius: 0.3em;
+    box-sizing: border-box;
+    margin: 0.5em 0em 0.7em;
+    resize: vertical;
+    font-family: degular-text, sans-serif;
+    font-size: 1em;
+    color: #f4f4f4;
+}
+
+/* when clicked inside */
+input[type=text]:focus {
+    border-color: #f4f4f4;
+}
+
+/* placeholder styling */
+input::placeholder {
+    opacity: .5;
+    color: #f4f4f4;
+}
+
+/* file input field styling */
+input[type=file] {
+    margin: 0.5em 0em 3em;
+    font-family: degular-text, sans-serif;
+    font-size: 0.9em;
+    color: #f4f4f4;
+}
+
+/* file upload button styling */
+input::file-selector-button {
+    font-family: degular-text, sans-serif;
+    padding: 0.2em 0.6em;
+    margin-right: 1em;
+    background-color: #FBADAD;
+    border: 1px solid #FBADAD;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+/* submit button styling */
+
+input[type=submit] {
+    font-family: degular-text, sans-serif;
+    background-color: #111111;
+}
