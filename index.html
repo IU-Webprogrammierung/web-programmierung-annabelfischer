@@ -3,59 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/piw6jzg.css">
     <title>👜 what's in annabel's bag?</title>
+
 </head>
 
 <body>
 
     <!--Horizontal Scrollable Menu https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp -->
     <nav class="scrollmenu">
-        <a href="index.html">home</a>
-        <a href="music.html">music</a>
-        <a href="books.html">books</a>
-        <a href="style.html">style</a>
-        <a href="showmeyourbag.html">show me your bag!</a>
+        <a class="active" href="index.html">home</a>
+        <a href="music.html">🎧 music</a>
+        <a href="books.html">📔 books</a>
+        <a href="style.html">💄 style</a>
+        <a href="showmeyourbag.html">👜 show me your bag!</a>
     </nav>
 
     <!--Main Section mit Hero, Items und CTA-->
     <main>
         <!--Hero-Section-->
-        <section>
-            <p>hey i'm annabel, you're wondering ...</p>
+        <section id="hero">
+            <h2>hey i'm annabel, you're wondering ...</h2>
             <h1>what's in my bag?</h1>
-            <img src="images/hero-image.jpg" alt="that's in my bag">
+            <a class="button" href="#item">let's find out!</a>
+            <div id="hero-img">
+                <img src="images/hero-image.jpg" alt="that's in my bag">
+            </div>
         </section>
 
         <!--Item-Section-->
-        <section>
+        <section id="item">
             <h2>featured bag items</h2>
-            <div>
+            <div class="three">
                 <figure>
                     <a href="music.html">
-                        <img src="images/headphones.png" width="300" alt="headphones">
-                        <figcaption>342<br>songs played</figcaption>
+                        <img src="images/headphones.png" alt="headphones">
+                        <figcaption><span class="emphasize">342</span><br>songs played</figcaption>
                     </a>
-                    </figure>
+                </figure>
                 <figure>
                     <a href="books.html">
-                        <img src="images/book.png" width="300" alt="book">
-                        <figcaption>623<br>pages read</figcaption>
+                        <img src="images/book.png" alt="book">
+                        <figcaption><span class="emphasize">623</span><br>pages read</figcaption>
                     </a>
                 </figure>
                 <figure>
                     <a href="style.html">
-                        <img src="images/clip.png" width="300" alt="hair clip">
-                        <figcaption>101<br>outfits slayed</figcaption>
+                        <img src="images/clip.png" alt="hair clip">
+                        <figcaption><span class="emphasize">101</span><br>outfits slayed</figcaption>
                     </a>
                 </figure>
             </div>
         </section>
 
         <!--CTA-Section-->
-        <section>
+        <section id="cta">
             <h2>show me your own bag!</h2>
             <p>got a bag, a story, and an item that speaks for you? enlist your essentials and share your bagged tales with the world.</p>
-            <a href="showmeyourbag.html">show me!</a>
+            <a class="button" href="showmeyourbag.html">show me!</a>
         </section>
     </main>
 

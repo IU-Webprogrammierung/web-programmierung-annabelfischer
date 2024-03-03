@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/piw6jzg.css">
     <title>🎧 music in annabel's bag</title>
 </head>
 
@@ -11,15 +13,14 @@
     <!--Horizontal Scrollable Menu https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp -->
     <nav class="scrollmenu">
         <a href="index.html">home</a>
-        <a href="music.html">music</a>
-        <a href="books.html">books</a>
-        <a href="style.html">style</a>
-        <a href="showmeyourbag.html">show me your bag!</a>
+        <a class="active" href="music.html">🎧 music</a>
+        <a href="books.html">📔 books</a>
+        <a href="style.html">💄 style</a>
+        <a href="showmeyourbag.html">👜 show me your bag!</a>
     </nav>
 
     <!--Header-->
     <header>
-        <a href="index.html">go back</a>
         <h1>music</h1>
         <p>my playlist is not just a collection of songs, it’s a part of my identity. an eclectic mix, as infinite as the universe and as personal as a heartbeat. it’s as unpredictable as a rollercoaster ride, oscillating between the heights of joy and depths of melancholy, capturing every emotion, every memory, every moment of my life.</p>
     </header>
@@ -27,26 +28,28 @@
     <!--Main Section mit Records und Spotify-->
     <main>
         <!--Record-Section-->
-        <section>
-            <h2>all time favourite records</h2>
-            <figure>
-                <img src="images/annabel-alll-things-must-pass.jpg">
-                <figcaption>george harrison: all things must pass</figcaption>
-            </figure>
-            <figure>
-                <img src="images/annabel-chinese-fountain.jpg">
-                <figcaption>the growlers: chinese fountain</figcaption>
-            </figure>
-            <figure>
-                <img src="images/annabel-the-car.jpg">
-                <figcaption>arctic monkeys: the car</figcaption>
-            </figure>
+        <section id="record">
+            <h2>my all time favourite records</h2>
+            <div class="three">
+                <figure>
+                    <img src="images/annabel-alll-things-must-pass.jpg">
+                    <figcaption>george harrison<br><span class="emphasize">all things must pass</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="images/annabel-chinese-fountain.jpg">
+                    <figcaption>the growlers<br><span class="emphasize">chinese fountain</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="images/annabel-the-car.jpg">
+                    <figcaption>arctic monkeys<br><span class="emphasize">the car</span></figcaption>
+                </figure>
+            </div>
         </section>
 
         <!--Spotify-Embed-->
-        <section>
+        <section id="spotify">
             <h2>listen to my favourite songs</h2>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7b39RYvaxmKqq2AoaQ2UGB?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7b39RYvaxmKqq2AoaQ2UGB?utm_source=generator&theme=0" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </section>
     </main>
     

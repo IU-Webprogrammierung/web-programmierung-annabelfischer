@@ -1,0 +1,625 @@
+/* ==========================================================================
+    basic styling
+========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: block;
+    background-color: #111111;
+    color: #f4f4f4;
+    font-family: degular-text, sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 145%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 8em;
+    padding: 0% 10%;
+}
+
+section {
+    margin-bottom: 8em;
+}
+
+h1 {
+    font-family: presley-slab, serif;
+    font-weight: 100;
+    font-size: 10vw; /* responsive text */
+    line-height: 120%;
+    margin: 1em 0em 0em 0em;
+    white-space: nowrap;
+}
+
+h2 {
+    font-family: presley-slab, serif;
+    font-weight: 100;
+    font-size: 6.5vw; /* responsive text */
+    text-align: center;
+    line-height: 120%;
+    margin-bottom: 0.6em;
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 3vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FBADAD;
+    opacity: .6;
+    margin: 0em 0em 1.5em;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+
+
+/* mobile adjustments for body, header and section
+========================================================================== */
+
+@media screen and (max-width: 769px) {
+    body {
+        font-size: 0.8em;
+    }
+    header {
+        margin-bottom: 5em;
+    }
+    section {
+        margin-bottom: 5em;
+    }
+}
+
+
+/* individual text-selection color
+========================================================================== */
+
+::selection {
+    color: #111111;
+    background: #FBADAD;
+}
+
+
+/* button styling and animation
+========================================================================== */
+
+.button {
+    color:#FBADAD;
+    font-size: 3vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid 1px;
+    border-radius: 100em;
+    padding: 0.3em 1.3em;
+    transition: .5s ease;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.button:hover {
+    color:#111111;
+    background-color: #FBADAD;
+    border: solid 1px #FBADAD;
+}
+
+/* button fixed font size and padding for big screens */
+@media screen and (min-width: 769px) {
+    .button {
+        font-size: 1.5em;
+        padding: 0.5em 1.5em;
+    }
+}
+
+
+
+/* ==========================================================================
+   horizontal scrollable menu
+========================================================================== */
+
+nav.scrollmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+nav.scrollmenu a {
+    display: inline-block;
+    color: #FBADAD;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.1em 0.9em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav.scrollmenu a:hover {
+    text-decoration: wavy underline;
+}
+
+nav.scrollmenu a:focus {
+    text-decoration: wavy underline;
+}
+
+/* active page */
+nav.scrollmenu a.active {
+    text-decoration: wavy underline;
+}
+
+
+
+/* ==========================================================================
+   hero styling (home)
+========================================================================== */
+
+
+/* hero wrapper and headings
+========================================================================== */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    padding-top: 30vh;
+}
+
+#hero h1 {
+    font-family: presley-slab, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 10vw; /* responsive text */
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FBADAD;
+    margin: 0.1em 0 0.4em 0;
+    white-space: npowrap;
+}
+
+#hero h2 {
+    font-weight: 200;
+    font-size: 4vw; /* responsive text */
+    text-align: center;
+    max-width: 80vw;
+    opacity: 0.5;
+    line-height: 140%;
+    color: #FBADAD;
+}
+
+/* fixed font size for big screens */
+@media screen and (min-width: 769px) {
+    #hero h2 {
+        font-size: 1.9em;
+    }
+}
+
+
+/* pink hero-img overlay
+========================================================================== */
+
+/* hero-img wrapper */
+#hero-img {
+    height: 50vw;
+    width: 100vw;
+    background: #FBADAD;
+    overflow: hidden;
+    border-radius: 2em;
+}
+
+/* real img reveal */
+#hero-img:hover img {
+    height: 55vw;
+    width: 100vw;
+    overflow: hidden;
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* media query img dimensions*/
+@media screen and (max-width: 576px) {
+    #hero-img {
+        height: 120vw;
+    }
+    #hero-img:hover img {
+        height: 125vw;
+    }
+}
+
+/* img behind overlay */
+#hero-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    background-blend-mode: screen;
+    transition: .5s ease;
+}
+
+
+
+/* ==========================================================================
+   item-section (home) and record-section (music) styling
+========================================================================== */
+
+
+/* section styling
+========================================================================== */
+
+#item {
+    scroll-margin: 20vw;
+}
+
+
+/* wrap around three items/records - responsive behaviour
+========================================================================== */
+
+/* row */
+.three { 
+    display: flex;
+}
+
+/* column */
+.three figure { 
+    flex: 33.33%;
+    transition: .5s ease;
+}
+
+/* smooth hover animation just between items */
+#item figure:hover {
+    flex: 50%;
+}
+
+#item figure:focus {
+    flex: 50%;
+}
+
+/* stack mobile */
+@media screen and (max-width: 576px) {
+    .three {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+
+/* item link styling
+========================================================================== */
+
+/* big item wrapper with link */
+#item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #FBADAD;
+}
+
+/* item img dimensions */
+#item img {
+    width: 75%;
+}
+
+
+/* record caption styling 
+========================================================================== */
+
+/* record name and artist */
+#record figcaption {
+    text-align: center;
+    color: #FBADAD;
+}
+
+/*record img dimensions */
+#record img {
+    width: 100%;
+}
+
+
+/* item and record span styling 
+========================================================================== */
+
+/* span styling */
+.emphasize {
+    font-family: presley-slab, serif;
+    font-weight: 100;
+    font-size: 6vw;
+    font-style: normal;
+    line-height: 120%;
+}
+
+/* font-size adjustment for bigger screens */
+@media screen and (min-width: 576px) {
+    #record .emphasize {
+        font-size: 2em;
+    }
+}
+
+
+
+/* ==========================================================================
+   cta-section styling (home)
+========================================================================== */
+
+/* format text in layout */
+#cta {
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+/* ==========================================================================
+   spotify-section (music)
+========================================================================== */
+
+/* section padding */
+#spotify {
+    padding: 0% 5%;
+}
+
+/* no line-wrap for iframe heading */
+#spotify h2 {
+    white-space: nowrap;
+    margin-bottom: 1em;
+}
+
+
+/* ==========================================================================
+   bookshelf (books)
+========================================================================== */
+
+
+/* basic styling
+========================================================================== */
+
+/* book section */
+#bookshelf {
+    padding: 0% 5%;
+}
+
+/* book cover */
+#bookshelf img {
+    width: 100%;
+}
+
+/* book name */
+#bookshelf h2 {
+    text-align: left;
+    line-height: 120%;
+    margin-bottom: 0em;
+    color: #FBADAD;
+}
+
+#bookshelf h3 {
+    margin-bottom: 1em;
+}
+
+
+/* bookshelf tabs
+========================================================================== */
+
+/* tab styling */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* tab label style */
+.tabs label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+/* book cover style */
+.tabs img {
+    cursor: pointer;
+    transition: .4s border-radius ease
+}
+
+/* show border on img on hover */
+.tabs img:hover {
+    border: solid 1px #FBADAD; 
+    border-radius: 2em;
+}
+
+/* article styling */
+.tabs article {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* hide radio buttons */
+.tabs [type=radio] {
+    display: none;
+}
+
+/* img style when checked */
+.tabs [type=radio]:checked + label img { 
+    border: solid 1px #FBADAD; 
+    border-radius: 2em;
+    box-shadow: 0em 0em 3em #FBADAD;
+}
+
+/* show article that matches bookcover */
+.tabs [type=radio]:checked + label + article {
+    display: block;
+}
+
+@media screen and (min-width: 576px) {
+    .tabs label {
+        order: 1;
+        width: 17vw;
+        padding: 2vw;
+    }
+    .tabs article {
+        order: 9;
+    }
+    .tabs {
+        justify-content: space-evenly;
+    }
+
+}
+
+
+/* ==========================================================================
+   style articles (style)
+========================================================================== */
+
+/* section padding */
+#style {
+    padding: 0% 5%;
+}
+
+/* basic styling for big screens
+========================================================================== */
+
+/* article img styling */
+#style img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100em 100em 0em 0em; 
+}
+
+/* style h2 adjust text align and margin */
+#style h2 {
+    color: #FBADAD;
+    text-align: left;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+/* style h3 adjust margin-bottom */
+#style h3 {
+    margin-bottom: 0.2em;
+}
+
+/* style p adjust margin-bottom */
+#style p {
+    margin-bottom: 0em;
+}
+
+/* center align textbox with article img */
+#style div {
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+}
+
+
+/* font-size adjustments for big screens
+========================================================================== */
+
+@media screen and (min-width: 991px) {
+    #style h2 {
+        font-size: 3em;
+    }
+    #style h3 {
+        font-size: 1.5em;
+    }
+}
+
+
+/* grid structure
+========================================================================== */
+
+#style article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6em;
+    margin-bottom: 6em;
+}
+
+/* stack on mobile */
+@media screen and (max-width: 991px) {
+    #style article {
+        grid-template-columns: 1fr;
+        row-gap: 2em;
+        margin-bottom: 3em;
+    }
+}
+
+
+
+/* ==========================================================================
+   contact form (show me your bag)
+========================================================================== */
+
+/* section padding */
+#form {
+    padding: 0% 5%;
+}
+
+/* form styling
+========================================================================== */
+
+/* text input field and textarea styling */
+input[type=text], textarea {
+    width: 100%;
+    padding: 0.6em;
+    background-color: #111111;
+    border: 1px solid #FBADAD;
+    border-radius: 0.3em;
+    box-sizing: border-box;
+    margin: 0.5em 0em 0.7em;
+    resize: vertical;
+    font-family: degular-text, sans-serif;
+    font-size: 1em;
+    color: #f4f4f4;
+}
+
+/* when clicked inside */
+input[type=text]:focus {
+    border-color: #f4f4f4;
+}
+
+/* placeholder styling */
+input::placeholder {
+    opacity: .5;
+    color: #f4f4f4;
+}
+
+/* file input field styling */
+input[type=file] {
+    margin: 0.5em 0em 3em;
+    font-family: degular-text, sans-serif;
+    font-size: 0.9em;
+    color: #f4f4f4;
+}
+
+/* file upload button styling */
+input::file-selector-button {
+    font-family: degular-text, sans-serif;
+    padding: 0.2em 0.6em;
+    margin-right: 1em;
+    background-color: #FBADAD;
+    border: 1px solid #FBADAD;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+/* submit button styling */
+
+input[type=submit] {
+    font-family: degular-text, sans-serif;
+    background-color: #111111;
+}
