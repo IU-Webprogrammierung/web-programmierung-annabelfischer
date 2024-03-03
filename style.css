@@ -570,6 +570,12 @@ nav.scrollmenu a.active {
     padding: 0% 5%;
 }
 
+@media screen and (min-width: 769px) {
+    #form {
+        padding: 0% 15%;
+    }
+}
+
 /* form styling
 ========================================================================== */
 
