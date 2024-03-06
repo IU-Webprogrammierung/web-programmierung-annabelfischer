@@ -448,7 +448,7 @@ nav.scrollmenu a.active {
 /* show shadow on img on hover */
 .tabs img:hover {
     box-shadow: 0 0 2rem #fbadad;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
 }
 
 /* article styling */
@@ -467,7 +467,7 @@ nav.scrollmenu a.active {
 
 /* img style when checked */
 .tabs [type=radio]:checked + label img { 
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     box-shadow: 0 0 2rem #fbadad;
 }
 
