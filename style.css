@@ -293,18 +293,26 @@ nav.scrollmenu a.active {
 
 /* smooth hover animation just between items */
 #item figure:hover {
-    flex: 50%;
+    transform: scale(1.2);
 }
 
 #item figure:focus {
-    flex: 50%;
+    transform: scale(1.2);
 }
 
 /* stack mobile */
 @media screen and (max-width: 576px) {
     .three {
         flex-direction: column;
+        justify-content: center;
         gap: 1rem;
+    }
+    #item figure:hover {
+        transform: none;
+    }
+    
+    #item figure:focus {
+        transform: none;
     }
 }
 
@@ -324,7 +332,7 @@ nav.scrollmenu a.active {
 
 /* item img dimensions */
 #item img {
-    width: 75%;
+    width: 100%;
 }
 
 
