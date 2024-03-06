@@ -526,6 +526,11 @@ nav.scrollmenu a.active {
     margin-bottom: 0rem;
 }
 
+#style div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* font-size adjustments for big screens
 ========================================================================== */
