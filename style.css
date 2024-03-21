@@ -133,6 +133,20 @@
             }
         }
 
+    /* animation definition 
+       ========================================================================== */
+        
+        @keyframes slide {
+            from {
+                opacity: 20%;
+                transform: translateY(5%);
+            }
+            to {
+                opacity: 100%;
+                transform: translateY(0%);
+            }
+        }
+
 /* ==========================================================================
    horizontal scrollable menu
    ========================================================================= */
@@ -167,7 +181,6 @@
     nav.scrollmenu a.active {
         text-decoration: wavy underline;
     }
-
 
 /* ==========================================================================
    hero styling (home)
@@ -261,13 +274,13 @@
        ========================================================================== */
 
         #item {
-            scroll-margin: 20vw;
+            scroll-margin: 5vw;
         }
 
     /* item link styling
        ========================================================================== */
 
-        /* big item wrapper with link to subpage */
+        /* single item wrapper with link to subpage */
         #item a {
             display: flex;
             flex-direction: column;
@@ -275,6 +288,9 @@
             text-align: center;
             text-decoration: none;
             color: #fbadad;
+            animation: slide linear both;
+            animation-timeline: view();
+            animation-range: entry 50% cover 50%;
         }
 
         /* item img dimensions */
@@ -330,9 +346,16 @@
             color: #fbadad;
         }
 
-        /*record img dimensions */
+        /* record img dimensions */
         #record img {
             width: 100%;
+        }
+
+        /* record animation */
+        #record figure {
+            animation: slide linear both;
+            animation-timeline: view();
+            animation-range: entry 50% cover 50%;
         }
 
     /* item and record span styling 
