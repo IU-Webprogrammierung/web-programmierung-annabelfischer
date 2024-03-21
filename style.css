@@ -1,19 +1,6 @@
 /* ==========================================================================
     basic styling
     ========================================================================== */
-    .cursor {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        margin-left: -20px;
-        margin-top: -20px;
-        border-radius: 50%;
-        border: 1px solid #fbadad;
-        transition: transform .2s ease;
-        transform-origin: center center;
-        pointer-events: none;
-        z-index: 10000;
-    }
 
     html {
         scroll-behavior: smooth;
@@ -102,12 +89,29 @@
             }
         }
 
-    /* individual text-selection color
+    /* custom text-selection color
        ========================================================================== */
 
         ::selection {
             color: #111;
             background: #fbadad;
+        }
+
+    /* custom cursor
+       ========================================================================== */
+    
+        .cursor {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            margin-left: -20px;
+            margin-top: -20px;
+            border-radius: 50%;
+            border: 1px solid #fbadad;
+            transition: transform .2s ease;
+            transform-origin: center center;
+            pointer-events: none;
+            z-index: 10000;
         }
 
     /* button styling and transition
