@@ -180,7 +180,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 30vh;
+            padding-top: 10rem;
         }
 
         #hero h1 {
@@ -225,9 +225,8 @@
         }
 
         /* real img reveal */
-        #hero-img:hover img {
-            height: 55vw;
-            width: 105vw;
+        #hero-img img:hover {
+            transform: scale(1.1);
             overflow: hidden;
             opacity: 1;
             filter: grayscale(0%);
@@ -237,9 +236,6 @@
         @media screen and (max-width: 576px) {
             #hero-img {
                 height: 120vw;
-            }
-            #hero-img:hover img {
-                height: 125vw;
             }
         }
 
