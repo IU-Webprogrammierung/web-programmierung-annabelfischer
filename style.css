@@ -225,7 +225,7 @@
         }
 
         /* real img reveal */
-        #hero-img img:hover {
+        #hero-img:hover img {
             transform: scale(1.1);
             overflow: hidden;
             opacity: 1;
@@ -236,6 +236,9 @@
         @media screen and (max-width: 576px) {
             #hero-img {
                 height: 120vw;
+            }
+            #hero-img:hover img {
+                height: 125vw;
             }
         }
 
