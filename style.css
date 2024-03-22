@@ -14,11 +14,12 @@
         font-size: 1rem;
         font-weight: 200;
         line-height: 145%;
+        margin: unset;
     }
 
     header {
         text-align: center;
-        margin: 3rem 0 5rem;
+        margin: 3rem 0rem 5rem 0rem;
     }
 
     section {
@@ -252,7 +253,7 @@
         /* hero-img wrapper */
         #hero-img {
             height: 50vw;
-            width: 100vw;
+            width: 100%;
             background: #fbadad;
             overflow: hidden;
             border-radius: 2rem;
