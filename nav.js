@@ -1,7 +1,10 @@
-// load nav where id=placeholder
+// load nav where id=placeholder -> hat funktioniert! :)
     $.get("nav.html", function(data){
     $("#nav-placeholder").replaceWith(data);
 });
+
+
+// set active class to navlink -> hat nicht funktioniert :(
 
 // get ul
 var navContainer = document.getElementsByClassName("ul");
