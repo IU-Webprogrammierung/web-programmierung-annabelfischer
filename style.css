@@ -170,15 +170,16 @@
    horizontal scrollable menu
    ========================================================================= */
 
-    nav.scrollmenu {
+    nav.scrollmenu ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
         overflow: auto;
         white-space: nowrap;
+        list-style: none;
     }
 
-    nav.scrollmenu a {
+    .scrollmenu ul li a {
         display: inline-block;
         color: #fbadad;
         font-size: 0.9rem;
@@ -197,8 +198,12 @@
     }
 
     /* active page */
-    nav.scrollmenu a.active {
+    .active {
         text-decoration: wavy underline;
+    }
+
+    ul {
+        padding: 0;
     }
 
 /* ==========================================================================
