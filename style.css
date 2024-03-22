@@ -193,15 +193,18 @@
 
         .navlink:hover {
             text-decoration: wavy underline;
+            text-underline-offset: 0.2rem;
         }
 
         .navlink:focus {
             text-decoration: wavy underline;
+            text-underline-offset: 0.2rem;
         }
 
         /* active page */
         .active {
             text-decoration: wavy underline;
+            text-underline-offset: 0.2rem;
         }
 
 /* ==========================================================================
