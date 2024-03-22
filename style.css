@@ -170,36 +170,38 @@
    horizontal scrollable menu
    ========================================================================= */
 
-    nav.scrollmenu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        overflow: auto;
-        white-space: nowrap;
-    }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: auto;
+            white-space: nowrap;
+            list-style: none;
+            padding: 0;
+        }
 
-    nav.scrollmenu a {
-        display: inline-block;
-        color: #fbadad;
-        font-size: 0.9rem;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 0.1rem 0.9rem;
-    }
+        .navlink {
+            display: inline-block;
+            color: #fbadad;
+            font-size: 0.9rem;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0.1rem 0.9rem;
+        }
 
-    nav.scrollmenu a:hover {
-        text-decoration: wavy underline;
-    }
+        .navlink:hover {
+            text-decoration: wavy underline;
+        }
 
-    nav.scrollmenu a:focus {
-        text-decoration: wavy underline;
-    }
+        .navlink:focus {
+            text-decoration: wavy underline;
+        }
 
-    /* active page */
-    nav.scrollmenu a.active {
-        text-decoration: wavy underline;
-    }
+        /* active page */
+        .active {
+            text-decoration: wavy underline;
+        }
 
 /* ==========================================================================
    hero styling (home)
